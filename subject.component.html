@@ -1,0 +1,43 @@
+<!-- <div class="table-responsive" >
+    <table class="table table-bordered" style="width:400px">
+    <thead>
+      <tr>
+        <th>Subject Name</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let subject of subject">
+       
+         <td style="text-align:center"><a  (click)="topic(subject.subjectid)">{{subject.subject}}</a></td>
+         
+    </tbody>
+  </table>
+</div> -->
+
+  
+  
+   
+<label>Subject</label> 
+<br>
+<select  id="orders" (change)="onSelect($event.target.value)"> 
+  <option *ngFor="let subject of subject" value="{{subject.subjectid}}">
+    {{subject.subject}}</option>
+</select>  
+<br>
+<label>Topic</label> 
+<br>
+ <select  (change)="onTopic($event.target.value)">
+   
+  <option *ngFor="let topics of topics" value="{{topics.topicid}}">  
+    {{topics.topic}}  
+</option>  
+ </select>
+ <br>
+ <label>Level</label>  
+ <select (change)="onQue($event.target.value)">  
+
+  <option *ngFor="let levels of levels " value="{{levels.levelid}}">  
+      {{levels.level}}  
+  </option>  
+   </select>

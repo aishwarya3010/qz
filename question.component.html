@@ -1,0 +1,39 @@
+<h1>Question Paper</h1>
+<!-- <script>
+  function examTime(){
+  timeout=window.setTimeout(showScore,60000)
+  }
+  function showScore(){
+    alert('Your score is')
+  }
+
+</script> -->
+<p>
+  test works!
+</p>
+<div class="container">
+  <h2>Questions</h2>
+  <ul class="list-group">
+    <li *ngFor="let question of questions; let i = index " class="list-group-item">{{i+1}}. {{question.que}}
+      <div  class="radio">
+        <label><input type="radio" value="1" name="optradio{{i}}" (click)="setAnswer(1,question.qid,i)" >{{question.ch1}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="2" name="optradio{{i}}" (click)="setAnswer(2,question.qid,i)" >{{question.ch2}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="3" name="optradio{{i}}" (click)="setAnswer(3,question.qid,i)">{{question.ch3}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="4" name="optradio{{i}}" (click)="setAnswer(4,question.qid,i)" >{{question.ch4}}</label>
+      </div>
+      <div class="container">
+        <button type="button" (click) = "showText(question.queid)" class="btn btn-primary">Show text</button> 
+      </div>
+    </li>
+  
+  </ul>
+ 
+
+  
+</div>
